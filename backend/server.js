@@ -26,6 +26,10 @@ app.use(cors(corsOption));
 // routes
 app.use("/api/v1/user",userRoute); 
 app.use("/api/v1/message",messageRoute);
+
+app.get('/' , (req,res) => {
+    res.send("Welcome to my Real Time Chat application");
+})
  
 
 server.listen(PORT, ()=>{
